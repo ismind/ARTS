@@ -1,6 +1,6 @@
 //================================
 R: (第一次尝试用英文写评论)
-   First, put a link here: https://medium.com/palantir/code-review-best-practices-19e02780015f.
+   First, put the link here: https://medium.com/palantir/code-review-best-practices-19e02780015f.
 Reviews:
    This article is about Code Review(CR),and explains why, what and when to review.
    I think CR essential for improving legibility,maintainability and security and so on. Althought it cost too much time in the early, but can 

@@ -1,10 +1,10 @@
 //================================
-# A: Leetcode-687 (https://leetcode.com/problems/longest-univalue-path/)
+##A: Leetcode-687 (https://leetcode.com/problems/longest-univalue-path/)
    1,The first time I choose this problem, I want to change another problem, because I do neither know how to solve, nor understand what 
 the description means.
    After thinking, I got it!(就是说随便两个点，只要连成一条线就符合要求)Any two points which can connect into a line is right.
    Put codes here:
-   /'''
+   /''javascript
    
    class Solution {
     int ans;
@@ -28,6 +28,7 @@ the description means.
         return Math.max(arrowLeft, arrowRight);
     }
 }
+''/
 作者：LeetCode
 链接：https://leetcode-cn.com/problems/longest-univalue-path/solution/zui-chang-tong-zhi-lu-jing-by-leetcode/
 来源：力扣（LeetCode）

@@ -35,7 +35,7 @@ public boolean canPartitionKSubsets(int[] nums, int k) {
    - 我们为app做了一个最快的引擎  
    - 那个鞍座是做什么用的？ 
    - 这就是那个app，我们花了不少预算在这个引擎上。
-   （本来是要做app的，却专注于引擎上）
+   （本来是要做app的，却专注于引擎上）  
    The picture tell us it is not necessary to code for functionality that you may need in the future.
    Simply put — live in the present, not in the future.(简而言之，活在当下)
 3. Clean code is better than clever code.(不要花里胡哨)Because you need to work with team not yourself, you should write understandable

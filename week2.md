@@ -32,7 +32,9 @@ public boolean canPartitionKSubsets(int[] nums, int k) {
 
 1. Bit.dev is possibly helpful to frontend progrommer, howerver, I have more knowledge about backend.
 2. The picture under the YAGNI title is interseting. I translate it into Chinese:
-   1) 我们为app做了一个最快的引擎  2）那个鞍座是做什么用的？ 3）这就是那个app，我们花了不少预算在这个引擎上。
+   - 我们为app做了一个最快的引擎  
+   - 那个鞍座是做什么用的？ 
+   - 这就是那个app，我们花了不少预算在这个引擎上。
    （本来是要做app的，却专注于引擎上）
    The picture tell us it is not necessary to code for functionality that you may need in the future.
    Simply put — live in the present, not in the future.(简而言之，活在当下)

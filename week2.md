@@ -42,3 +42,6 @@ public boolean canPartitionKSubsets(int[] nums, int k) {
 code rather than a riddle for others. On other's standpoint, if they write a clever code rather clean code, how would you feel?
 4. Finally, I repeat the famous words: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
   
+## S ： Share the article which is very good!(It is highly recommended)
+(put the link:)
+https://mp.weixin.qq.com/s/Ba8jrULf8NJbENK6WGrVWg

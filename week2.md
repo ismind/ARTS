@@ -27,6 +27,42 @@ public boolean canPartitionKSubsets(int[] nums, int k) {
    1. Oh, it cost me about one hour to understand, and I just grasp a part of this solution's meaning.
    2. I write down the process how the recursion go in the paper.Althoght I get a little, but I further make sense of this problem, which is a relief to me.
 
+### Single Number I and II
+   First, I just read online solution, but I is reminded that why not to try by yourself.I make the desicion to try.
+   Oh, waht a surprise!I come up with a good solution which can solve the two solutions!!!
+   1.Show the code below:
+   ```javascript
+   public int singleNumber(int[] nums) {
+        //1，先排序，
+        int len = nums.length;
+
+        if (len == 1) return nums[0];
+
+        Arrays.sort(nums);
+        //2，再将其与左右数字相减，如果都不为0，则是所求结果
+        //特殊情况nums[0], nums[len - 1]
+        if (nums[0] - nums[1] != 0) return nums[0];
+
+        for (int i = 1; i <= len - 2; i++) {
+            if ((nums[i] - nums[i - 1] != 0) && ((nums[i] - nums[i + 1] != 0)))
+                return nums[i];
+        }
+
+        return nums[len - 1];
+    }
+   ```
+   The idea is that you should sort the array first, and then subtract from the left number and the right number if the two results is not zero being answer!
+   2. There is a good solution!(link: https://mp.weixin.qq.com/s/ufQdFDFR3oQsG_WyMq35hQ)
+   ```javascript
+   public int singleNumber(int[] nums) {
+        int ans = nums[0];
+         for (int i = 1; i < nums.length; i++) {
+            ans = ans ^ nums[i];
+        }
+        return ans;
+    }
+   ```
+   
 ## R : The first article is about 4 minutes to finish
 (link: https://blog.bitsrc.io/code-principles-every-programmer-should-follow-e01bfe976daf). 
 

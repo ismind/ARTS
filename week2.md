@@ -28,6 +28,7 @@ public boolean canPartitionKSubsets(int[] nums, int k) {
    2. I write down the process how the recursion go in the paper.Althoght I get a little, but I further make sense of this problem, which is a relief to me.
 
 ### Single Number I and II
+(136-Single Number 137 and 137-Single Number II in Leetcode)
    First, I just read online solution, but I is reminded that why not to try by yourself.I make the desicion to try.
    Oh, waht a surprise!I come up with a good solution which can solve the two solutions!!!
    1.Show the code below:

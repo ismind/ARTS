@@ -79,11 +79,11 @@ public boolean canPartitionKSubsets(int[] nums, int k) {
 code rather than a riddle for others. On other's standpoint, if they write a clever code rather clean code, how would you feel?
 4. Finally, I repeat the famous words: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
   
-## T : Tips I got is bitwise operatiob
+## T : Tips I got is bitwise operation
 1. determine whether a number is even or odd
 ```javascript
    public boolean isOdd(int i) {
-        return (1&1) != 0;
+        return (i & 1) != 0;
     }
 ```
 2. Power of Two

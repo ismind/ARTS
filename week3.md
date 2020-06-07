@@ -35,7 +35,7 @@
   
 ## R: (没有读完，挺遗憾的)
   https://levelup.gitconnected.com/how-to-use-generics-in-java-aeca75d03a6c  
-  这篇文章大致是将Java泛型的。
+  这篇文章主要是讲Java泛型的。
 
 ## T: 
   1. 自己遇到的一个就是notepad++的多行选择，不得不说，利用好这些工具还是能很好提高自己的效率的，  

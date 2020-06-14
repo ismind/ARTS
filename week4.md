@@ -42,3 +42,10 @@ https://leetcode.com/problems/search-a-2d-matrix-ii/
 3. 分别从1）实现简单应用的难易 2）编译应用的时长 3）启动应用的时长 4）处理请求个数
 4. 最后评估各种结果（文章有讲到，就不翻译了。）
 5. 个人认为，这篇文章还是很精彩的，对于学习词汇很有帮助。
+
+## T:
+   None。
+   
+## S:
+   https://mp.weixin.qq.com/s/1LHraeRhcYoxY03VS7Riag  
+   bobo老师的文章，确实是有深度和来自他的思考。还是不错的。

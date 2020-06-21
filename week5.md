@@ -73,3 +73,17 @@ public String replaceSpace(String s) {
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ``` 
 4. 我觉得这样简单的题目，看起来简单，可是当自己真正去做，才发现自己还是有欠缺。
+
+## R : https://medium.com/swlh/stop-using-if-else-statements-f4d2323e6e4  
+1. 这篇文件主要是说，建议少使用if-else,而是使用状态模式，提高代码的可读性，使得代码更容易维护。
+2. 可能会认为代码更复杂，而作者也认为:"complexity does not originate from the amount of classes you have, but from the responsibilities those classes take."
+
+## T : 
+1. tomcat部署应用其实有三种方式：1）war包 2）jar包 3）描述符  
+1）war包，这个idea自带就可以打包成war包，而且war包、jar包里面的内容实际上是一样的，那么问题来了，为什么一般不打包成jar包呢？
+这是因为如果你打包成jar包，项目里面有一些jar包（依赖），那么tomcat如何才知道你这个jar包是依赖还是项目呢？
+其实在HostConfig.java的deployApps方法里，会直接判断哪些是以 .war结尾的，然后进行部署。  
+2） 描述符，也就是servel.xml文件的<context path="" docBase="">.  
+path表示项目的访问路径，比如/helloServlet，docBase则是项目在那个文件路径下，比如c:tomcat/test
+        
+## S : 

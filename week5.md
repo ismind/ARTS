@@ -2,6 +2,12 @@
 https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/  
 1. 这题虽然简单，但是我觉得还是动手一下，试试。  
 2. 结果自己还是没有想出什么好办法，然后调用string自带的replaceAll，可是效率不高。
+```javascript
+public String replaceSpace(String s) {
+        s = s.replaceAll(" ", "%20");
+        return s;
+    }
+``` 
 3. 看到说建立一个三倍长的数组，好办法，可是自己代码写的是这样的，
 ```javascript
 public static String replaceSpace(String s) {

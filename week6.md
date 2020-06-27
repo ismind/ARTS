@@ -50,3 +50,13 @@ public boolean wordBreak(String s, List<String> wordDict) {
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 + 不好理解，要花一些时间。
+
+## R: [4 Things That are most confusing for Java Developer](https://medium.com/the-code-monster/4-things-that-java-developer-thinks-are-most-confusing-complicated-87c2598f33f0). 
+1. 这是medium上的一篇文章，写了关于下面几个主题：匿名类、多线程、synchronized、序列化与反序列化
+2. 个人认为这篇文章写的很棒，对于了解这四个主题，以及相关英文，都是很大帮助
+3. 其中有句话
+>The main target of using the multithreading is to maximising the usage of CPU.
+4. 在序列化，我测试了一下，transient和static效果一样，不将变量值写入文件中，去掉transient和static，才会写入
+```javascript
+private transient int nonSerializeValueSalary
+```

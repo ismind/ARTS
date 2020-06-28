@@ -60,3 +60,14 @@ public boolean wordBreak(String s, List<String> wordDict) {
 ```javascript
 private transient int nonSerializeValueSalary
 ```
+
+## T : 
+1. 最近写了点前台代码，position为sticky这个定位，这里是为了footer上的一个banner，让其位于页面底部，但是滚动到最底部，banner要在footer上面。
+2. 另外就是学习了Tomcat 整体架构和处理请求流程解析视频，大致流程是：socket获取操作系统的数据，然后endpoint获取socket的数据，然后解析数据，经过tomcat里的容器处理，  
+Engine-》Host-》Context-》Wrapper，先经过这几个容器，每个容器都有一个阀门，处理不同的事情，然后FilterChain-》Servlet，处理servlet的业务逻辑。  
+当时想过为什么要分这么多容器，我想原因是要处理不同的事情。  
+因为每个容器都对应这不同的功能。
+
+## S : 
+ [在 Java 虚拟机上班是一种怎样的体验？](https://mp.weixin.qq.com/s/ks_Lk68rMBHieEu-lGuPZg)
+1. 我觉得这篇文章还是很幽默的，读起来很有意思，可以简单理解JVM虚拟机的内置线程。

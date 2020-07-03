@@ -4,7 +4,7 @@
 1. 这篇文章真的值得再看一遍，第一遍看了大概
 2. 我觉得放在分享里也不为过。
 
-## S : [张一鸣：我的大学四年收获及工作感悟](https://mp.weixin.qq.com/s/qAovoRFNkMeMNS-4pZ0fLg). 
+## S : [我的大学四年收获及工作感悟](https://mp.weixin.qq.com/s/qAovoRFNkMeMNS-4pZ0fLg). 
 + 这篇文章是张一鸣老师写的，我觉得写的不错，有老师个人的见解与思想。  
 > 以下是我个人的思考与收获  
 ---

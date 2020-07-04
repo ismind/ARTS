@@ -1,4 +1,71 @@
 
+## A: [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/). 
+给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。  
+>'.' 匹配任意单个字符  
+>'*' 匹配零个或多个前面的那一个元素  
+所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。  
+##### 说明:
++ s 可能为空，且只包含从 a-z 的小写字母。  
++ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。  
+##### 示例 1:
+```javascript
+输入:
+s = "aa"
+p = "a"
+输出: false
+解释: "a" 无法匹配 "aa" 整个字符串。
+```
+##### 示例 22:
+```javascript
+输入:
+s = "aa"
+p = "a*"
+输出: true
+解释: 因为 '*' 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 'a'。因此，字符串 "aa" 可被视为 'a' 重复了一次。
+```
+1. 这道题，犯的第一个错误就是没看清题目要求，*是匹配0个字符漏了，吃亏了。
+2. 花了将近1个小时，不搞了，我知道是动态规划，但是写不出来，果然是困难的。
+3. 我应该直接看题解，然后背下来的。
+```javascript
+public boolean isMatch(String s, String p) {
+        int m = s.length();
+        int n = p.length();
+
+        boolean[][] f = new boolean[m + 1][n + 1];
+        f[0][0] = true;
+        for (int i = 0; i <= m; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                if (p.charAt(j - 1) == '*') {
+                    f[i][j] = f[i][j - 2];
+                    if (matches(s, p, i, j - 1)) {
+                        f[i][j] = f[i][j] || f[i - 1][j];
+                    }
+                }
+                else {
+                    if (matches(s, p, i, j)) {
+                        f[i][j] = f[i - 1][j - 1];
+                    }
+                }
+            }
+        }
+        return f[m][n];
+    }
+
+    public boolean matches(String s, String p, int i, int j) {
+        if (i == 0) {
+            return false;
+        }
+        if (p.charAt(j - 1) == '.') {
+            return true;
+        }
+        return s.charAt(i - 1) == p.charAt(j - 1);
+    }
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/regular-expression-matching/solution/zheng-ze-biao-da-shi-pi-pei-by-leetcode-solution/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
 
 ## R: [Understanding Java Streams](https://medium.com/swlh/understanding-java-streams-e0f2df12441f). 
 1. 这篇文章真的值得再看一遍，第一遍看了大概

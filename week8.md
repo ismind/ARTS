@@ -55,6 +55,10 @@ public ListNode getKthFromEnd(ListNode head, int k) {
 3、输入的参数 k 为 0. 或负数，同样会造成程序的崩溃。
 ```
 5. 自己确实忽略了k的取值，考虑到了head为null，但是没有考虑k，这个算是自己的一个不足。
+6. 留言区说到，面试环节很重要，要让面试官看到你的思考过程。然后说到了双指针的方法：
+```javascript
+代码是对的，提交过去也不会报错，只不过在面试的时候需要和面试官沟通这些异常情况怎么处理，让面试官知道你的思考过程
+```
 
 ## R: [Introduction to Java 8 Parallel Stream — Java2Blog](https://medium.com/javarevisited/java-8-parallel-stream-java2blog-e1254e593763). 
 1. 这篇文章讲到了java并行流，比较了单线程运行和多线程运行。

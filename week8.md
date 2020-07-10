@@ -46,6 +46,15 @@ public ListNode getKthFromEnd(ListNode head, int k) {
         return latter;
     }
 ```
+4. 我又看了一下留言，果然，事情不简单！
+```javascript
+不少人在面试前从网上看到过这道用两个指针遍历的思路来解答这道题，因此听到面试官的这道题，他们心中一喜，很快就写出了代码。可是几天后等来的不是Offer，而是拒信，于是百思不得其解。其实原因很简单，就是自己的代码不够鲁棒。面试官可以找出3种方法让这段代码崩溃。
+
+1、输入 Head 指针为Null。由于代码会试图访问空指针指向的内存，程序会崩溃。
+2、输入以 Head 为头结点的链表的结点总数少于 k 。由于在 for 循环中会在链表向前走k-1步，仍然会由于空指针造成崩溃。
+3、输入的参数 k 为 0. 或负数，同样会造成程序的崩溃。
+```
+5. 自己确实忽略了k的取值，考虑到了head为null，但是没有考虑k，这个算是自己的一个不足。
 
 ## R: [Introduction to Java 8 Parallel Stream — Java2Blog](https://medium.com/javarevisited/java-8-parallel-stream-java2blog-e1254e593763). 
 1. 这篇文章讲到了java并行流，比较了单线程运行和多线程运行。

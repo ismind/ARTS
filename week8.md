@@ -73,3 +73,54 @@ ArrayList is very easy to split, as we can find a middle element by its index an
 
 ###  [Asynchronous Programming In Java](https://medium.com/swlh/asynchronous-programming-in-java-d4390cceea3a). 
 + 这篇文章主要讲了Spring webFlux module的一些方法实现异步编程。
+
+## T ： 
+1. 最近看了几篇文章，第一篇是关于随机函数的，提到了几点缺点
+```javscript
+nextInt() 这个方法看起来可能不错，但是存在三个缺点。
+
+第一个缺点是： 如果 n 是比较小的 2 的乘方，经过一段相当短的周期之后，它产生的随机数将会重复。
+
+第二个缺点是：如果 n 不是 2 的乘法，那么平均起来，有些数就会比其它的数出现的更频繁。特别是 n 比较大，这个缺点就非常明显。
+这就是为什么 2*(Integer.MAX_VALUE/3) 中有用2乘的原因。
+```
+所以作者给的建议就是
+```avscript
+随机数的生成器涉及了很多算法的相关知识，幸运的是，我们并不需要自己来做这些工作，我们可以利用现成的成果为我们所用，如 Random.nextInt(n) 或者 java.security.SecureRandom，或者第三方的 API。注意：我们尽量使用类库，而不是自己去开发。
+
+Linux 系统有 /dev/random,/dev/urandom 向用户提供真随机数。
+
+http://random.irb.hr/ 是一个免费为学术和科研机构提供真随机数服务的网站。
+
+http://random.org/ 在 Internet 上提供真随机数服务，它用大气噪音生成真随机数。
+```
+2. 下面代码本来期望的结果为 -1，但调试结果返回 65535。
+```javsscript
+System.out.println((int)(char)(byte) -1);
+```
+我有点想不明白，后来才明白，
+```javascript
+1.-1 是 int 类型，它的二进制结构
+
+0b1111_1111_1111__1111_1111_1111_1111_1111
+
+int 转成 byte，截取低 8 位 0b1111_1111 值也为 -1
+
+2.byte 转 char，需要先拓展到 int 型，然后转成 char
+
+2.1 byte 转 int
+
+0b1111_1111_1111__1111_1111_1111_1111_1111
+
+2.2 int 转 char
+
+0b1111_1111_1111__1111
+
+值位 65535
+
+3.char 转 int (补零)
+
+0b0000_0000_0000__0000_1111_1111_1111_1111
+
+其值位 65535
+```

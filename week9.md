@@ -44,3 +44,20 @@ public ListNode removeElements(ListNode head, int val) {
 }
 ```
 利用递归来存储中间变量，很好。但是评论区，也有说，递归太深，可能无法通过。但是也不失为一种很好的解法。
+3.
+```javascript
+public ListNode removeElements(ListNode head, int val) {
+        ListNode fakeHead = new ListNode(-1);
+        fakeHead.next = head;
+        ListNode curr = head, prev = fakeHead;
+        while (curr != null) {
+            if (curr.val == val) {
+                prev.next = curr.next;
+            } else {
+                prev = prev.next;
+            }
+            curr = curr.next;
+        }
+        return fakeHead.next;
+    }
+```

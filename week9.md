@@ -1,5 +1,5 @@
-## A: [剑指 Offer 18. 删除链表的节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
-[203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
+## A: [剑指 Offer 18. 删除链表的节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)  
+## [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
 Remove all elements from a linked list of integers that have value val.  
 #### Example:
 ```javascript

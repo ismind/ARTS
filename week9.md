@@ -61,3 +61,14 @@ public ListNode removeElements(ListNode head, int val) {
         return fakeHead.next;
     }
 ```
+
+## R: [The Future of the Web Is Here Already](https://medium.com/tech-explained/the-future-of-the-web-is-here-already-20065e3049af) 
+1. 这篇文章主要介绍了PWA，这种新的app模式。
+2. 我个人觉得这是一种趋势，想要一个应用，还需要下载，不如直接打开一个网页更方便。
+3. 其实，上次做胃镜时，就在想，未来可不可以不需要一根管子伸到胃里，直接有个什么仪器在外面一扫描就可以知道胃部有什么问题呢？
+4. 以后的app会不会都是一个个网页呢？需要哪个直接打开对应的网页就好了。
+
+## T:
+最近在学习vue，其中几点收获：
+1. vue是采用MVVM模式，只需要关注数据就可以了。
+2. 就是vue的语法与一些细节，然后就是，觉得初学看视频确实很容易入门，我自己是花了RMB买的视频，个人还是觉得值得的。

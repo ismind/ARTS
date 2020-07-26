@@ -75,5 +75,8 @@ public TreeNode buildTree(int[] preorder, int preStart, int preEnd, int[] inorde
 }
 ```
 
+## R: [How to Write Clean Java Code](https://medium.com/javarevisited/clean-java-code-79b6da1878c9)  
+1. 本文讲述了写出简洁、可维护的代码一些要点，比如命名、提取共用方法等等。
+
 ## T: [用简单的代码，看懂 CPU 背后的重要机制](https://mp.weixin.qq.com/s/xpZE2uWsQOGjc1_P50q1Eg)
 bobo老师的文章，基本都是干货，这篇很棒。

@@ -37,3 +37,25 @@ public class Solution {
     }
 }
 ```
+
+## [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) 
+1. 这道题，再做一遍，思路很明显，就是用两个指针，一个快、一个慢，如果有环，那么快的一定会追上慢的。
+2. 可是自己写了多次，不明白问题再哪里。
+```javascript
+public boolean hasCycle(ListNode head) {
+        if (head == null) return false;
+        ListNode slow = head, fast = head;
+        while (slow.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) return true;
+        }
+        return false;
+    }
+```
+一直显示while判断那里为空异常java.lang.NullPointerException  
+3. 原来存在fast.next为空，那么fast.next.next自然就报错了，所以更换判断条件为
+```javascript
+while (fast.next != null && fast.next.next != null) {
+```
+it works!

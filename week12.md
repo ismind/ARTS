@@ -117,3 +117,30 @@ public ListNode detectCycle(ListNode head) {
         return null;
     }
 ```
+
+## S: [spring源码系列（二）——毁三观的spring自动注入](https://blog.csdn.net/java_lyvee/article/details/102499560) 
+1. 这篇文章还是很不错的，主要讲了：
+```
+spring有几种依赖注入方式？  
+官网的意思是DI(依赖注入)一共有两种主要的变体（注意会考），分别是基于构造方法的依赖注入和基于setter（setXxxx(…)）的依赖注入，  
+不管是手动装配还是自动装配都是基于这两种方式或者变体方式来的；但是这里一定要回答到主要和变体两个名词，因为有的注入方式就不是  
+这两种，而是这两种其中一种的变体方式；比如在一个类的属性上面加@Autowired，这种方式注入属性的方式就是利用了java的反射知识，  
+field.set(value,targetObject);关于这个我在后面的文章中对spring源码解析的时候会说明@Autowired的原理；所以@Autowired这种注入  
+的方式是setter注入方式的一种变体  
+但是这里需要说明的是所谓的setter其实和属性无关，什么意思呢？一般的setter方法会对应一个属性，  
+但是spring的基于setter的注入方式是不需要属性的，仅仅只需要一个setter方法
+```
+---
+```
+@Autowired只是手动装配，spring会首先根据属性的类型去容器中找，如果没有找到在根据属性的名字找，找到了则注入，  
+没有找到则异常  
+byType和byName是自动装配模型，  
+依赖注入是一个过程，主要通过setter和构造方法以及一些变体的方式完成把对象依赖、或者填充上的这个过程叫做依赖  
+注入，不管手动装配还是自动装配都有这个过程；而自动装配模型是一种完成自动装配依赖的手段体现，每一种模型都使  
+用了不同的技术去查找和填充bean；
+```
+---
+```
+1. 当在xml中加入 default-autowire="byType"，如果找到两个，那么spring不会报错
+2. 使用@Autowired,根据类型找到两个，则会报错
+```

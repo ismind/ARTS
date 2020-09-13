@@ -59,3 +59,61 @@ public boolean hasCycle(ListNode head) {
 while (fast.next != null && fast.next.next != null) {
 ```
 it works!
+
+## [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) 
+1. 主要就是遍历，第一次回到环形起点，那么map中必然包含，返回即可
+```
+public ListNode detectCycle(ListNode head) {
+        if (head == null) return null;
+        ListNode next = head;
+        Map<ListNode, Integer> map = new HashMap();
+        while (next != null) {
+           if (map.containsKey(next)) return next;
+           map.put(next, next.val);
+           next = next.next;
+        }
+        return null;
+    }
+```
+### 2.Floyd 算法
+1. 也是定义快慢指针，第二步直接搬出结论，定义一个指针从第一次相遇的节点开始，然后定义第二个指针从head开始，  
+两个指针相遇就是环的起点，这是结论。
+2. 原因在https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode/  
+```
+作为补充： 阶段2中的公式：
+
+2(F + a) = F + a + b + a
+如果写成以下会更严谨一点
+
+2(F + a) = F + N(a + b) + a
+ 2F + 2a = F + 2a + b + (N - 1)(a + b)
+       F = b + (N - 1)(a + b)
+F是到达入口点长度
+N为ptr2跑第几圈会与ptr1相遇
+```
+```
+public ListNode detectCycle(ListNode head) {
+        ListNode meet = getMeetNode(head);
+        
+        if (meet == null) return null;
+        
+        ListNode p1 = head;
+        while (p1 != meet) {
+            p1 = p1.next;
+            meet = meet.next;
+        }
+        return p1;
+    }
+    
+    public ListNode getMeetNode(ListNode head) {
+        if (head == null || head.next == null) return null;
+        ListNode slow = head, fast = head;
+        
+        while (fast.next != null && fast.next.next != null) {
+            slow  = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) return slow;
+        }
+        return null;
+    }
+```
